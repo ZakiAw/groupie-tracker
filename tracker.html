@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Archive</title>
+    <style>
+        div {
+            text-align: center;
+        }
+        .card {
+            width: 250px;
+            height: 350px;
+            transition: 0.4s;
+            background-color: #1b1b1b;
+            color: #b7dfde;
+            outline: 1px solid #b7dfde;
+            padding: 10px;
+            box-sizing: border-box;
+            background: linear-gradient(to bottom, #3d3d3d, #0f0f0f);
+    }
+        .card:hover {
+            width: 255px;
+            height: 355px;
+            box-shadow: 3px 3px 5px 5px rgb(80, 93, 97);
+            transition: 0.4s;
+        }
+        html {
+            height: 100%;
+            background-color: #202220;
+            background: linear-gradient(to bottom, #1a1a1a, #000000);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            color: #b7dfde;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Artist Archive</h1>
+            <div class="card">
+                <img src="https://groupietrackers.herokuapp.com/api/images/queen.jpeg" alt="Queen"></img>
+                <h2>Queen</h2>
+            </div>
+    </center>
+</body>
+</html>
