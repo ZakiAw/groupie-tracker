@@ -9,28 +9,45 @@
             text-align: center;
         }
         .card {
+            position: relative;
             width: 250px;
             height: 350px;
             transition: 0.4s;
             background-color: #1b1b1b;
-            color: #b7dfde;
             outline: 1px solid #b7dfde;
             padding: 10px;
             box-sizing: border-box;
-            background: linear-gradient(to bottom, #3d3d3d, #0f0f0f);
+            .text {
+            opacity: 0%;
+            transition: 0.4s;
+            position:absolute; top:0; left:5%; opacity:0;
+           
+        }
     }
         .card:hover {
-            width: 255px;
-            height: 355px;
-            box-shadow: 3px 3px 5px 5px rgb(80, 93, 97);
+            box-shadow: 15px 15px 4px 4px rgb(0, 0, 0);
+            transition: 0.7s;
+            background-color: #b7dfde;
+            color: #1b1b1b;
+            outline: 1px solid #000000;
+            img {
+            opacity: 0%;
             transition: 0.4s;
+            }
+            .text {
+            opacity: 100%;
+            transition: 0.7s;
+        }
         }
         html {
             height: 100%;
             background-color: #202220;
-            background: linear-gradient(to bottom, #1a1a1a, #000000);
+            background: linear-gradient(to bottom, #2c2c2c, #0f0f0f);
             background-repeat: no-repeat;
             background-size: cover;
+        }
+        .band {
+            color: #b7dfde;
         }
         h1 {
             color: #b7dfde;
@@ -38,7 +55,7 @@
         img {
             width: 100%;
             height: auto;
-            
+            transition: 0.4s
         }
 
     </style>
@@ -46,9 +63,13 @@
 <body>
     <center>
         <h1>Artist Archive</h1>
+
             <div class="card">
                 <img src="https://groupietrackers.herokuapp.com/api/images/queen.jpeg" alt="Queen"></img>
-                <h2>Queen</h2>
+                <div class="text">
+                    <h2>- QUEEN <br>hello <br>world <br>hehe</h2>
+                </div>
+                <div class="band"><h2>Queen</h2></div>
             </div>
     </center>
 </body>
