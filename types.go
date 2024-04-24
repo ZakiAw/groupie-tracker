@@ -5,10 +5,12 @@ type Respect struct {
 	LocationsUrl string `json:"locations"`
 	DatesUrl     string `json:"dates"`
 	RelationUrl  string `json:"relation"`
+	artist       []Artist
 	
+
 }
 type Artist struct {
-	ID           int      `json:"id"`
+	ID           int      `json:"id"` //"id":52
 	Image        string   `json:"image"`
 	Name         string   `json:"name"`
 	Members      []string `json:"members"`
