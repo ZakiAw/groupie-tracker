@@ -4,8 +4,8 @@ import (
 	"html/template"
 	"net/http"
 )
-var temp *template.Template
 
+var temp *template.Template
 
 func main() {
 	call()

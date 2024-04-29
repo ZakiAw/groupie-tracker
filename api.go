@@ -12,11 +12,16 @@ var (
 	ApiLink = "https://groupietrackers.herokuapp.com/api"
 )
 
+
 func call() {
-	Getmosa(ApiLink)
+	Getmosa(ApiLink, &Data)
+	Getmosa(Data.ArtistUrl, &Data.Artist)
+	Getmosa(Data.LocationsUrl, &Data.Location)
+	Getmosa(Data.DatesUrl, &Data.Date)
+	Getmosa(Data.RelationUrl, &Data.Relation)
 }
 
-func Getmosa(Link string) {
+func Getmosa(Link string, Respect interface{}) {
 	resp, err := http.Get(Link)
 	if err != nil {
 		fmt.Println("><><><><>< No Response ><><><><>><><")
@@ -29,8 +34,7 @@ func Getmosa(Link string) {
 	}
 	defer resp.Body.Close()
 
-
-	err = json.Unmarshal(body, &art)
+	err = json.Unmarshal(body, Respect)
 	if err != nil {
 		fmt.Println("errr", err)
 		return
