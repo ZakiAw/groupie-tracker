@@ -6,10 +6,11 @@
     <link href="/api.go"></link>
     <title>Artist Archive</title>
     <style>
-        div {
-            text-align: center;
+        div {  
+            text-align: center;           
         }
         .card-contener {
+            margin-top: 3%;
             position: relative;
             width: 250px;
             height: 350px;
@@ -46,6 +47,7 @@
             background: linear-gradient(to bottom, #2c2c2c, #0f0f0f);
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
         .band {
             color: #b7dfde;
@@ -68,7 +70,7 @@
         <div class="card-contener">
                 <img src="{{ .Image}}" alt="Queen"></img>
                 <div class="text">
-                    <h2>- {{ .Name}} <br>{{ .FirstAlbum}}<br>{{ .CreationDate}} <br></h2>
+                    <h2>{{ .Name}} <br>{{ .Members}}<br>{{ .CreationDate}} <br></h2>
                 </div>
                 <div class="band"><h2>{{ .Name}}</h2></div>
             </div>
