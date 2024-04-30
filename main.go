@@ -10,6 +10,8 @@ var temp *template.Template
 func main() {
 	call()
 	temp = template.Must(template.ParseGlob("tracker.html"))
+	fs := http.FileServer(http.Dir("style"))
+	http.Handle("/style/", http.StripPrefix("/style", fs))
 	http.HandleFunc("/", MainHandler)
 	http.ListenAndServe(":8080", nil)
 }
