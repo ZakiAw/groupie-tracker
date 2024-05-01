@@ -11,7 +11,7 @@ type Respect struct {
 	Relation     Rel
 }
 type Artist struct {
-	ID           int      `json:"id"` //"id":52
+	ID           int      `json:"id"`
 	Image        string   `json:"image"`
 	Name         string   `json:"name"`
 	Members      []string `json:"members"`

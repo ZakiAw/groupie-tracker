@@ -8,17 +8,21 @@
     <title>Artist Archive</title>
 </head>
 <body>
-
+    <div class="container">
         <h1>Artist Archive</h1>
 <br>
-        {{range .Artist}}
-        <div class="card-container">
-                <img src="{{ .Image}}" alt="Queen"></img>
-                <div class="text">
-                    <h2>{{ .Name}} <br>{{ .Members}}<br>{{ .CreationDate}} <br></h2>
-                </div>
-                <div class="band"><h2>{{ .Name}}</h2></div>
-            </div>
-            {{end}}
+{{range .Artist}}
+<div class="card-container">
+    <img src="{{ .Image}}" alt="Artist"></img>
+    <div class="text">
+        <h2> Name: <br>{{ .Name}} <br>
+            Members: {{ range .Members }}{{ . }} {{ end }} <br>
+            Creation Date: {{ .CreationDate }} <br>
+        </h2>
+    </div>
+    <div class="band"><h2>{{ .Name}}</h2></div>
+</div>
+{{end}}
+</div>
 </body>
 </html>
