@@ -22,21 +22,21 @@ func call() {
 }
 
 func Getmosa(Link string, Respect interface{}) {
-	resp, err := http.Get(Link)
+	linkData, err := http.Get(Link)
 	if err != nil {
-		fmt.Println("><><><><>< No Response ><><><><>><><")
+		fmt.Println("><><><><>< Wala ma metzaker ><><><><>><><")
 		return
 	}
-	body, err := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(linkData.Body)
 	if err != nil {
-		fmt.Println("artsfdhgj", err)
+		fmt.Println("><><><><>< walaaa ><><><><>", err)
 		return
 	}
-	defer resp.Body.Close()
+	defer linkData.Body.Close()
 
 	err = json.Unmarshal(body, Respect)
 	if err != nil {
-		fmt.Println("errr", err)
+		fmt.Println("fehadagay", err)
 		return
 	}
 }
