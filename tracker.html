@@ -15,7 +15,7 @@
 <div class="card-container">
     <img src="{{ .Image}}" alt="Artist"></img>
     <div class="text">
-        <h2>{{ .Name}}</h2>
+        <h2><a href="/artist/{{ .ID }}">{{ .Name }}</a></h2>
         <p class="inf"> Members: <br> {{ range .Members }}{{ . }} {{ end }} <br><br>
             Creation Date: {{ .CreationDate }} <br>
        </p> 
