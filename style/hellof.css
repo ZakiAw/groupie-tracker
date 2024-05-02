@@ -13,29 +13,29 @@
     background-color: #1b1b1b;
     border-radius: 5px;
     padding: 10px;
-    overflow: hidden;
+    overflow: hidden;  
     .text {
-    opacity: 0%;
-    transition: 0.4s;
-    position:absolute; top:0; left:5%; opacity:0;
+        opacity: 0%;
+        transition: 0.4s;
+        position:absolute; top:0; left:5%; opacity:0;
+        text-align: left;
+    }
+}
+.card-container:hover{
 
-}
-}
-.card-container:hover {
-    transform: scale(105%);
     box-shadow: 15px 15px 4px 4px rgb(0, 0, 0);
     transition: 0.7s;
     background-color: #b7dfde;
     color: #1b1b1b;
     outline: 1px solid #000000;
+    z-index: 1;
     img {
     opacity: 0%;
     transition: 0.4s;
-    }
-    .text {
+}
+.text {
     opacity: 100%;
     transition: 0.7s;
-
 }
 }
 body {
@@ -57,4 +57,8 @@ img {
     width: 100%;
     height: auto;
     transition: 0.4s;
+}
+p {
+    color: #405b5b;
+    font-size: large;
 }

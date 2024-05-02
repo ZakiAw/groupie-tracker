@@ -14,6 +14,7 @@ func main() {
 	http.Handle("/style/", http.StripPrefix("/style", fs))
 	http.HandleFunc("/", MainHandler)
 	http.ListenAndServe(":8080", nil)
+	
 }
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {

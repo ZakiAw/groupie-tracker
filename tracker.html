@@ -15,10 +15,10 @@
 <div class="card-container">
     <img src="{{ .Image}}" alt="Artist"></img>
     <div class="text">
-        <h2> Name: <br>{{ .Name}} <br>
-            Members: {{ range .Members }}{{ . }} {{ end }} <br>
+        <h2>{{ .Name}}</h2>
+        <p class="inf"> Members: <br> {{ range .Members }}{{ . }} {{ end }} <br><br>
             Creation Date: {{ .CreationDate }} <br>
-        </h2>
+       </p> 
     </div>
     <div class="band"><h2>{{ .Name}}</h2></div>
 </div>
