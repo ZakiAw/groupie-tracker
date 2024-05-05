@@ -10,15 +10,16 @@ import (
 var (
 	Data    Respect
 	ApiLink = "https://groupietrackers.herokuapp.com/api"
+	Final Fin
 )
 
 
 func call() {
 	Getmosa(ApiLink, &Data)
-	Getmosa(Data.ArtistUrl, &Data.Artist)
-	Getmosa(Data.LocationsUrl, &Data.Location)
-	Getmosa(Data.DatesUrl, &Data.Date)
-	Getmosa(Data.RelationUrl, &Data.Relation)
+	Getmosa(Data.ArtistUrl, &Final.Artistsf)
+	Getmosa(Data.LocationsUrl, &Final.Locationsf)
+	Getmosa(Data.DatesUrl, &Final.Datesf)
+	Getmosa(Data.RelationUrl, &Final.Relf)
 }
 
 func Getmosa(Link string, Respect interface{}) {

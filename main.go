@@ -20,9 +20,9 @@ func main() {
 }
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {
-	temp.ExecuteTemplate(w, "tracker.html", Data)
+	temp.ExecuteTemplate(w, "tracker.html", Final)
 }
 
 func ArtistHandler(w http.ResponseWriter, r *http.Request) {
-	temp2.ExecuteTemplate(w, "artist.html", Data)
+	temp2.ExecuteTemplate(w, "artist.html", Final)
 }
