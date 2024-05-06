@@ -6,29 +6,26 @@ type Respect struct {
 	DatesUrl     string `json:"dates"`
 	RelationUrl  string `json:"relation"`
 }
-type Artist struct {
+type ArtistStruct struct {
 	ID           int      `json:"id"`
 	Image        string   `json:"image"`
 	Name         string   `json:"name"`
 	Members      []string `json:"members"`
 	CreationDate int      `json:"creationDate"`
 	FirstAlbum   string   `json:"firstAlbum"`
-	Locations    string   `json:"locations"`
-	ConcertDates string   `json:"concertDates"`
-	Relations    string   `json:"relations"`
 }
-type Loc struct {
-	Locations []string `json:"locations"`
+type LocationStruct struct {
+		Locations []string `json:"locations"`
 }
-type Da struct {
+type DataStruct struct {
 	Dates []string `json:"dates"`
 }
-type Rel struct {
+type RelationStruct struct {
 	DatesLocations map[string][]string `json:"datesLocations"`
 }
-type Fin struct {
-	Artistsf   []Artist
-	Locationsf Loc
-	Datesf     Da
-	Relf       Rel
+type FinalStruct struct {
+	Artistf   ArtistStruct
+	Locationf LocationStruct
+	Datef     DataStruct
+	Relationf RelationStruct
 }
