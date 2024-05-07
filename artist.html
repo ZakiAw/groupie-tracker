@@ -8,6 +8,8 @@
     <title>Artist Details</title>
 </head>
 <body>
-    <div class="band"><h2>{{.}}</h2></div> 
+{{range .}}
+    <div class="band"><h2 name = "ID">{{ .Artistf.Image}}</h2></div> 
+{{end}}
 </body>
 </html>

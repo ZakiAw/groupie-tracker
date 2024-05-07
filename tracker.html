@@ -11,16 +11,16 @@
     <div class="container">
         <h1>Artist Archive</h1>
 <br>
-{{range .Artistf}}
+{{range .}}
 <div class="card-container">
-    <img src="{{ .Image}}" alt="Artist"></img>
+    <img src="{{ .Artistf.Image}}" alt="Artist"></img>
     <div class="text">
-        <h2><a href="/artist/">{{ .Name }}</a></h2>
-        <p class="inf"> Members: <br> {{ range .Members }}{{.}} {{ end }} <br><br>
-            Creation Date: {{ .CreationDate }} <br>
+        <h2><a href="/artist/{{ .Artistf.ID}}">{{ .Artistf.Name }}</a></h2>
+        <p class="inf"> Members: <br> {{ range .Artistf.Members }}{{.}} {{ end }} <br><br>
+            Creation Date: {{ .Artistf.CreationDate }} <br>
        </p> 
     </div>
-    <div class="band"><h2>{{ .Name}}</h2></div>
+    <div class="band"><h2>{{ .Artistf.Name}}</h2></div>
 </div>
 {{end}}
 </div>
