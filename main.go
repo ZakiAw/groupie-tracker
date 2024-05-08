@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"strconv"
 	"strings"
@@ -23,9 +22,7 @@ func main() {
 
 func MainHandler(w http.ResponseWriter, r *http.Request) {
 	all := collect()
-	id := r.FormValue("ID")
 	temp.ExecuteTemplate(w, "tracker.html", all)
-	fmt.Println(id)
 }
 
 func ArtistHandler(w http.ResponseWriter, r *http.Request) {

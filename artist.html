@@ -8,13 +8,13 @@
     <title>Artist Details</title>
 </head>
 <body>
-{{range .}}
-    <div class="band"><h2 name = "ID">{{ range .Locationf.Locations}}<br>{{.}}{{end}}</h2></div> 
-    <h2> </h2>
-    <div style="width: 10%;"><img src="{{ .Artistf.Image}}" alt=""></div>
-    {{range $DatesLocations, $value := .RelationStruct}}
-    <li>{{$DatesLocations}}: {{$value}}</li>
-    {{end}}
+        {{range .}}
+        <div class="atable">
+        <p>{{ range .Locationf.Locations}}<li>{{.}}</li>{{end}}</p>
+        <img class="img2" src="{{ .Artistf.Image}}" alt="">
+        <p>{{ range .Datef.Dates}}<li>{{.}}</li>{{end}}</p>
+
 {{end}}
+</div>
 </body>
 </html>
