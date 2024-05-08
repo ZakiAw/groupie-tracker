@@ -9,7 +9,12 @@
 </head>
 <body>
 {{range .}}
-    <div class="band"><h2 name = "ID">{{ .Artistf.Image}}</h2></div> 
+    <div class="band"><h2 name = "ID">{{ range .Locationf.Locations}}<br>{{.}}{{end}}</h2></div> 
+    <h2> </h2>
+    <div style="width: 10%;"><img src="{{ .Artistf.Image}}" alt=""></div>
+    {{range $DatesLocations, $value := .RelationStruct}}
+    <li>{{$DatesLocations}}: {{$value}}</li>
+    {{end}}
 {{end}}
 </body>
 </html>

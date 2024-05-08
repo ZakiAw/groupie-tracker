@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strconv"
+	"strings"
 	"text/template"
 )
 
@@ -15,7 +17,7 @@ func main() {
 	http.Handle("/style/", http.StripPrefix("/style", fs))
 
 	http.HandleFunc("/", MainHandler)
-	// http.HandleFunc("/artist/", ArtistHandler)
+	http.HandleFunc("/artist/", ArtistHandler)
 	http.ListenAndServe(":8080", nil)
 }
 
@@ -26,18 +28,17 @@ func MainHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(id)
 }
 
-//	func ArtistHandler(w http.ResponseWriter, r *http.Request) {
-//		all := collect()
-//		temp2.ExecuteTemplate(w, "artist.html", all)
-//	}
-// func main() {
-// 	var a1 []FinalStruct
-// 	id := 5
-// 	all := collect()
-// 	for _, i := range all {
-// 		if id == i.Artistf.ID {
-// 			a1 = append(a1, i)
-// 		}
-// 	}
-// 	fmt.Println(a1)
-// }
+func ArtistHandler(w http.ResponseWriter, r *http.Request) {
+	parts := strings.Split(r.URL.Path, "/")
+	nums := parts[len(parts)-1]
+	num, _ := strconv.Atoi(nums)
+	var OneArtist []FinalStruct
+	
+	all := collect()
+	for _, i := range all {
+		if i.Artistf.ID == num {
+			OneArtist = append(OneArtist, i)
+		}
+	}
+	temp2.ExecuteTemplate(w, "artist.html", OneArtist)
+}
