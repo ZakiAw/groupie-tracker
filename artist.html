@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/api.go"></link>
-   <link rel="stylesheet" href="/style/hellof.css">
+   <link rel="stylesheet" href="/style/hello.css">
     <title>Artist Details</title>
 </head>
 <body>
         {{range .}}
         <div class="atable">
-        <p>{{ range .Locationf.Locations}}<li>{{.}}</li>{{end}}</p>
-        <img class="img2" src="{{ .Artistf.Image}}" alt="">
-        <p>{{ range .Datef.Dates}}<li>{{.}}</li>{{end}}</p>
+            <div class="he"><img class="img2" src="{{ .Artistf.Image}}" alt=""></div>
+            <div class="he"><h2>Locations:<br>{{ range .Locationf.Locations}}<li>{{.}}</li>{{end}}</h2></div>
+        <div class="he"><h2>Dates:<br>{{ range .Datef.Dates}}<li>{{.}}</li>{{end}}</h2></div>
 
 {{end}}
 </div>
